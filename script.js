@@ -11,17 +11,19 @@ const description = document.querySelector('.description');
 
 const moda = "moda<br>2020-2024"
 const modaDescription = "produced for MODA Magazine at the University of Chicago"
-const sanxia = "sanxia<br>2024"
-const sanxiaDescription = "In 2003, the Three Gorges Dam was constructed, " +
-                          "displacing over one million residents. Included " +
-                          "in those impacted was my grandmother’s entire family. " +
-                          "My grandmother grew up in Old Fengdu City, now hosting " +
-                          "fishermen during low-tide seasons and entirely submerged the rest of the year. " +
-                          '\nFor 5 weeks, I traveled across this region, attempting to 发现三峡 ' +
-                          '(“Discover the Three Gorges” in a far less poetic translation). ' +
-                          'This period of time turned into a meditation on language. ' +
-                          'I communicated in broken Chinese, composed photographs with elementary grammar, ' +
-                          'and rekindled familial ties previously unknown to me across our differing nationalities.'
+const sanxia = "sanxia (three gorges) <br>2024"
+const sanxiaDescription = "In 2003, the Three Gorges Dam was erected, consequently displacing 1.4 million residents," + 
+                          "of which includes my grandmother's entire family. 21 years later, I returned with the " +
+                          "simple intention of bettering my photographic language and inadvertently discovered a " +
+                          "history tied both to my bloodline and the whole of China.<br>" +
+                          "When I first arrived in Yichang on the 20th of June, the photographer I was apprenticing introduced " +
+                          "the 发现三峡 itinerary's resolve to discover something new about the region. He said our goal this " +
+                          "time was to produce work different from what had already been excavated by other photographers in " +
+                          "the two decades since the dam's construction.<br>" +
+                          "For the five weeks we spent in various small towns and villages, I sometimes spoke, "+
+                          "periodically raised my camera, and mostly just listened. The people of Sanxia live at "+
+                          "the cusp of old and new, between the tension of nature and industry. They are tenacious "+
+                          "and resolute. Amidst all the movement (the Yangtze, society, modernization), they forged a path to stay."
 
 const imageTexts = [
   { title: sanxia, description: sanxiaDescription},
@@ -76,5 +78,5 @@ galleryContainer.addEventListener("scroll", function () {
 
   const currentImageText = imageTexts[closestImageIndex];
   title.innerHTML = currentImageText.title;
-  description.textContent = currentImageText.description;
+  description.innerHTML = currentImageText.description;
 });
