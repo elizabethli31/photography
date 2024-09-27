@@ -12,14 +12,10 @@ const description = document.querySelector('.description');
 const moda = "moda<br>2020-2024"
 const modaDescription = "produced for MODA Magazine at the University of Chicago"
 const sanxia = "sanxia (three gorges) <br>2024"
-const sanxiaDescription = "In 2003, the Three Gorges Dam was erected, consequently displacing 1.4 million residents," + 
+const sanxiaDescription = "In 2003, the Three Gorges Dam was erected, consequently displacing 1.4 million residents, " + 
                           "of which includes my grandmother's entire family. 21 years later, I returned with the " +
                           "simple intention of bettering my photographic language and inadvertently discovered a " +
-                          "history tied both to my bloodline and the whole of China.<br>" +
-                          "When I first arrived in Yichang on the 20th of June, the photographer I was apprenticing introduced " +
-                          "the 发现三峡 itinerary's resolve to discover something new about the region. He said our goal this " +
-                          "time was to produce work different from what had already been excavated by other photographers in " +
-                          "the two decades since the dam's construction.<br>" +
+                          "history tied both to my bloodline and the whole of China.<br></br>" +
                           "For the five weeks we spent in various small towns and villages, I sometimes spoke, "+
                           "periodically raised my camera, and mostly just listened. The people of Sanxia live at "+
                           "the cusp of old and new, between the tension of nature and industry. They are tenacious "+
