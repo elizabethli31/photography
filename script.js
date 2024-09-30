@@ -13,13 +13,13 @@ const moda = "moda<br>2020-2024"
 const modaDescription = "produced for MODA Magazine at the University of Chicago"
 const sanxia = "sanxia (three gorges) <br>2024"
 const sanxiaDescription = "In 2003, the Three Gorges Dam was erected, consequently displacing 1.4 million residents, " + 
-                          "of which includes my grandmother's entire family. 21 years later, I returned with the " +
+                          "including my grandmother's entire family. 21 years later, I returned with the " +
                           "simple intention of bettering my photographic language and inadvertently discovered a " +
-                          "history tied both to my bloodline and the whole of China.<br></br>" +
+                          "history tied both to my bloodline and to the whole of China.<br></br>" +
                           "For the five weeks we spent in various small towns and villages, I sometimes spoke, "+
                           "periodically raised my camera, and mostly just listened. The people of Sanxia live at "+
                           "the cusp of old and new, between the tension of nature and industry. They are tenacious "+
-                          "and resolute. Amidst all the movement (the Yangtze, society, modernization), they forged a path to stay."
+                          "and resolute. Amidst all the movement &mdash; the Yangtze, society, modernization &mdash; they forged a path to stay."
 
 const imageTexts = [
   { title: sanxia, description: sanxiaDescription},
