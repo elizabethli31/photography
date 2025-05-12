@@ -22,6 +22,10 @@ const sanxiaDescription = "In 2003, the Three Gorges Dam was constructed, " +
                           'This period of time turned into a meditation on language. ' +
                           'I communicated in broken Chinese, composed photographs with elementary grammar, ' +
                           'and rekindled familial ties previously unknown to me across our differing nationalities.'
+                          
+const gradDescription = "During the week immediately following graduation, " +
+                        "I asked my friends to show me their favorite " +
+                        "(or most frequented) spaces around Hyde Park."
 
 const imageTexts = [
   { title: sanxia, description: sanxiaDescription},
@@ -32,9 +36,14 @@ const imageTexts = [
   { title: sanxia, description: sanxiaDescription},
   { title: sanxia, description: sanxiaDescription},
   { title: sanxia, description: sanxiaDescription},
-  { title: "play<br>2024", description: "(or running) produced for MODA Magazine at the University of Chicago" },
-  { title: "play<br>2024", description: "(or running) produced for MODA Magazine at the University of Chicago" },
-  { title: "play<br>2024", description: "(or running) produced for MODA Magazine at the University of Chicago" },
+  { title: "-<br>2024", description: gradDescription},
+  { title: "-<br>2024", description: gradDescription},
+  { title: "-<br>2024", description: gradDescription},
+  { title: "-<br>2024", description: gradDescription},
+  { title: "-<br>2024", description: gradDescription},
+  { title: "play<br>2024", description: modaDescription },
+  { title: "play<br>2024", description: modaDescription },
+  { title: "play<br>2024", description: modaDescription },
   { title: "shadow and the self<br>2024", description: "produced for RBIM at the University of Chicago" },
   { title: "mad professor<br>2023", description: modaDescription },
   { title: "mad professor<br>2023", description: modaDescription },
