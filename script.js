@@ -11,8 +11,7 @@ const description = document.querySelector('.description');
 
 const moda = "moda<br>2020-2024"
 const modaDescription = "produced for MODA Magazine at the University of Chicago"
-const gradDescription = "During the week immediately following graduation, " +
-                        "I asked my friends to show me their favorite " +
+const gradDescription = "Friends in their favorite " +
                         "(or most frequented) spaces around Hyde Park."
 
 const sanxia = "sanxia (three gorges) <br>2024"
@@ -26,6 +25,10 @@ const sanxiaDescription = "In 2003, the Three Gorges Dam was erected, consequent
                           "and resolute. Amidst all the movement &mdash; the Yangtze, society, modernization &mdash; they forged a path to stay."
 
 const imageTexts = [
+  { title: "-<br>2025", description: "An ongoing set of images of my family."},
+  { title: "-<br>2025", description: "An ongoing set of images of my family."},
+  { title: "-<br>2025", description: "An ongoing set of images of my family."},
+  { title: "-<br>2025", description: "Manu at the Dia in June."},
   { title: sanxia, description: sanxiaDescription},
   { title: sanxia, description: sanxiaDescription},
   { title: sanxia, description: sanxiaDescription},
@@ -34,11 +37,11 @@ const imageTexts = [
   { title: sanxia, description: sanxiaDescription},
   { title: sanxia, description: sanxiaDescription},
   { title: sanxia, description: sanxiaDescription},
-  { title: "-<br>2024", description: gradDescription},
-  { title: "-<br>2024", description: gradDescription},
-  { title: "-<br>2024", description: gradDescription},
-  { title: "-<br>2024", description: gradDescription},
-  { title: "-<br>2024", description: gradDescription},
+  { title: "graduation<br>2024", description: gradDescription},
+  { title: "graduation<br>2024", description: gradDescription},
+  { title: "graduation<br>2024", description: gradDescription},
+  { title: "graduation<br>2024", description: gradDescription},
+  { title: "graduation<br>2024", description: gradDescription},
   { title: "play<br>2024", description: modaDescription },
   { title: "play<br>2024", description: modaDescription },
   { title: "play<br>2024", description: modaDescription },
