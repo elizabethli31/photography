@@ -11,21 +11,19 @@ const description = document.querySelector('.description');
 
 const moda = "moda<br>2020-2024"
 const modaDescription = "produced for MODA Magazine at the University of Chicago"
-const sanxia = "sanxia<br>2024"
-const sanxiaDescription = "In 2003, the Three Gorges Dam was constructed, " +
-                          "displacing over one million residents. Included " +
-                          "in those impacted was my grandmother’s entire family. " +
-                          "My grandmother grew up in Old Fengdu City, now hosting " +
-                          "fishermen during low-tide seasons and entirely submerged the rest of the year. " +
-                          '\nFor 5 weeks, I traveled across this region, attempting to 发现三峡 ' +
-                          '(“Discover the Three Gorges” in a far less poetic translation). ' +
-                          'This period of time turned into a meditation on language. ' +
-                          'I communicated in broken Chinese, composed photographs with elementary grammar, ' +
-                          'and rekindled familial ties previously unknown to me across our differing nationalities.'
-                          
 const gradDescription = "During the week immediately following graduation, " +
                         "I asked my friends to show me their favorite " +
                         "(or most frequented) spaces around Hyde Park."
+
+const sanxia = "sanxia (three gorges) <br>2024"
+const sanxiaDescription = "In 2003, the Three Gorges Dam was erected, consequently displacing 1.4 million residents, " + 
+                          "including my grandmother's entire family. 21 years later, I returned with the " +
+                          "simple intention of bettering my photographic language and inadvertently discovered a " +
+                          "history tied both to my bloodline and to the whole of China.<br></br>" +
+                          "For the five weeks we spent in various small towns and villages, I sometimes spoke, "+
+                          "periodically raised my camera, and mostly just listened. The people of Sanxia live at "+
+                          "the cusp of old and new, between the tension of nature and industry. They are tenacious "+
+                          "and resolute. Amidst all the movement &mdash; the Yangtze, society, modernization &mdash; they forged a path to stay."
 
 const imageTexts = [
   { title: sanxia, description: sanxiaDescription},
@@ -85,5 +83,5 @@ galleryContainer.addEventListener("scroll", function () {
 
   const currentImageText = imageTexts[closestImageIndex];
   title.innerHTML = currentImageText.title;
-  description.textContent = currentImageText.description;
+  description.innerHTML = currentImageText.description;
 });
