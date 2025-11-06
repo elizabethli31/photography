@@ -85,3 +85,64 @@ galleryContainer.addEventListener("scroll", function () {
   title.innerHTML = currentImageText.title;
   description.innerHTML = currentImageText.description;
 });
+
+// --- MOBILE GRID + MODAL LOGIC ---
+
+const modal = document.getElementById('image-modal');
+const modalImg = document.getElementById('modal-img');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+const imageArray = Array.from(document.querySelectorAll('.gallery img'));
+let currentIndex = 0;
+
+// Open modal when an image is tapped
+imageArray.forEach((img, index) => {
+  img.addEventListener('click', (e) => {
+    if (window.innerWidth > 768) return; // only trigger on mobile
+    currentIndex = index;
+    openModal();
+  });
+});
+
+function openModal() {
+  modal.classList.add('active');
+  modalImg.src = imageArray[currentIndex].src;
+}
+
+// Navigate left/right
+function showNext() {
+  currentIndex = (currentIndex + 1) % imageArray.length;
+  modalImg.src = imageArray[currentIndex].src;
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+  modalImg.src = imageArray[currentIndex].src;
+}
+
+// Handle modal clicks
+modal.addEventListener('click', (e) => {
+  const modalRect = modalImg.getBoundingClientRect();
+
+  // Click outside image (white margin)
+  if (
+    e.clientX < modalRect.left ||
+    e.clientX > modalRect.right ||
+    e.clientY < modalRect.top ||
+    e.clientY > modalRect.bottom
+  ) {
+    modal.classList.remove('active');
+    return;
+  }
+
+  // Click inside image
+  const clickX = e.clientX - modalRect.left;
+  const imgWidth = modalRect.width;
+
+  if (clickX < imgWidth / 2) {
+    showPrev(); // tapped left side
+  } else {
+    showNext(); // tapped right side
+  }
+});

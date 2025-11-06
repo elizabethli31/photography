@@ -80,21 +80,33 @@ a { color: inherit; }
     overflow: visible;
     height: auto;
     margin-top: 20px;
+    padding-left: 30px;
+    /* margin-left: 30px; */
+    /* margin-right: 20px; */
   }
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
-    gap: 10px;
-    white-space: normal;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    width: calc(100% - 40px);
+    gap: 12px;
+    justify-items: center;
   }
 
   .gallery img {
     width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
-    margin: 0;
+    background-color: #fff; 
   }
+
+  .gallery > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 
   .text-box {
     display: none; /* hide desktop text box */
@@ -119,39 +131,13 @@ a { color: inherit; }
 
 .modal-content {
   position: relative;
-  max-width: 95%;
+  max-width: 80%;
   max-height: 90%;
+  padding-right: 30px;
 }
 
 .modal-content img {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2.5rem;
-  color: black;
-  cursor: pointer;
-  padding: 10px;
-  user-select: none;
-}
-
-.nav-btn.left {
-  left: -40px;
-}
-
-.nav-btn.right {
-  right: -40px;
-}
-
-/* Hide nav buttons on small phones if needed */
-@media (max-width: 400px) {
-  .nav-btn.left { left: 5px; }
-  .nav-btn.right { right: 5px; }
 }
