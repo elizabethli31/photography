@@ -54,4 +54,19 @@ a { color: inherit; }
     padding: 20px;
     box-sizing: border-box;
   }
+
+  .inside {
+    position: static;
+    transform: none;
+    margin-top: 78px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .image {
+    max-height: calc(100vh - 160px);
+    width: auto;
+    max-width: 100%;
+  }
 }
