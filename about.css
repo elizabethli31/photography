@@ -58,15 +58,34 @@ a { color: inherit; }
   .inside {
     position: static;
     transform: none;
-    margin-top: 78px;
-    padding: 0 20px;
-    box-sizing: border-box;
+    margin-top: 58px;
+    padding: 0;
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  main, section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
   }
 
   .image {
-    max-height: calc(100vh - 160px);
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: none;
+    margin-bottom: 0;
+  }
+
+  section p {
+    padding: 20px;
+    margin: 0;
   }
 }
