@@ -36,9 +36,22 @@ a { color: inherit; }
   }
   
 .nav-bar {
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
     font-size: 18px;
     margin-left: 20px;
     margin-top: 20px;
     margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }
