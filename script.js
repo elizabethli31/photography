@@ -99,15 +99,6 @@ const nextBtn = document.getElementById('next-btn');
 const imageArray = Array.from(document.querySelectorAll('.gallery img'));
 let currentIndex = 0;
 
-// Open modal when an image is tapped
-imageArray.forEach((img, index) => {
-  img.addEventListener('click', (e) => {
-    if (window.innerWidth > 768) return; // only trigger on mobile
-    currentIndex = index;
-    openModal();
-  });
-});
-
 function openModal() {
   modal.classList.add('active');
   modalImg.src = imageArray[currentIndex].src;
@@ -124,11 +115,26 @@ function showPrev() {
   modalImg.src = imageArray[currentIndex].src;
 }
 
+// Auto-open modal on mobile
+if (window.innerWidth <= 768) {
+  currentIndex = 0;
+  openModal();
+}
+
 // Handle modal clicks
 modal.addEventListener('click', (e) => {
-  const modalRect = modalImg.getBoundingClientRect();
+  if (window.innerWidth <= 768) {
+    // Full-screen tap navigation on mobile
+    if (e.clientX < window.innerWidth / 2) {
+      showPrev();
+    } else {
+      showNext();
+    }
+    return;
+  }
 
-  // Click outside image (white margin)
+  // Desktop: click outside image closes modal
+  const modalRect = modalImg.getBoundingClientRect();
   if (
     e.clientX < modalRect.left ||
     e.clientX > modalRect.right ||
@@ -139,13 +145,12 @@ modal.addEventListener('click', (e) => {
     return;
   }
 
-  // Click inside image
+  // Desktop: click inside image navigates
   const clickX = e.clientX - modalRect.left;
   const imgWidth = modalRect.width;
-
   if (clickX < imgWidth / 2) {
-    showPrev(); // tapped left side
+    showPrev();
   } else {
-    showNext(); // tapped right side
+    showNext();
   }
 });
